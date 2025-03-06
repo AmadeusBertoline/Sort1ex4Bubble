@@ -22,12 +22,4 @@ public class BubbleSort {
 		}
 	}
 
-	public static void main(String[] args) {
-		BubbleSort sorter = new BubbleSort();
-		int[] vetor = { 5, 2, 9, 1, 5, 6 };
-
-		vetor = sorter.Bubble(vetor, 0, vetor.length);
-
-		System.out.println(Arrays.toString(vetor));
-	}
 }
