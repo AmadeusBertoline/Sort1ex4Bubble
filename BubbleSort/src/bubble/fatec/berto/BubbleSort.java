@@ -1,25 +1,18 @@
 package bubble.fatec.berto;
 
-import java.util.Arrays;
-
 public class BubbleSort {
 
-	public int[] Bubble(int[] vetor, int rodadas, int n) {
-		if (n == 1) {
-			return vetor; //
-		}
+    public int[] bubbleSort(int[] vetor, int n) {
+        if (n == 1) return vetor;
 
-		if (rodadas < n - 1) {
-			// Se precisar trocar, faça a troca
-			if (vetor[rodadas] > vetor[rodadas + 1]) {
-				int aux = vetor[rodadas];
-				vetor[rodadas] = vetor[rodadas + 1];
-				vetor[rodadas + 1] = aux;
-			}
-			return Bubble(vetor, rodadas + 1, n);
-		} else {
-			return Bubble(vetor, 0, n - 1);
-		}
-	}
+        for (int i = 0; i < n - 1; i++) {
+            if (vetor[i] > vetor[i + 1]) {
+                int aux = vetor[i];
+                vetor[i] = vetor[i + 1];
+                vetor[i + 1] = aux;
+            }
+        }
 
+        return bubbleSort(vetor, n - 1);
+    }
 }
